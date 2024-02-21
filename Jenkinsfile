@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('ansible') {
             steps {
-                echo 'ansible --version'
+                sh 'ansible --version'
             }
         }
     }
