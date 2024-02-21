@@ -25,7 +25,7 @@ pipeline {
 
                     sh 'ansible server1 -i hosts -m yum -a "name=wget state=latest" -u ec2-user --become'
 
-                    sh 'ansible server1 -i hosts -m yum -a "name=nmap state=latest" -u ec2-user --become'
+                    sh 'ansible server4 -i hosts -m yum -a "name=nmap state=latest" --become'
 
                     // sh 'ansible server1 -i hosts -m yum -a "name=java-17-openjdk state=latest" -u ec2-user --become'
 

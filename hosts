@@ -2,3 +2,4 @@
 server1 ansible_host=34.222.155.68
 server2 ansible_host=34.222.155.69
 server3 ansible_host=34.222.155.70
+server4 ansible_host=35.91.219.16     ansible_connection=ssh     ansible_user=ec2-user
