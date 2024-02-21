@@ -18,7 +18,9 @@ pipeline {
 
                 sh 'ansible --version'
 
-                sh 'cat /etc/ansible/hosts'
+                sh 'cat /etc/ansible/ansible.cfg'
+
+                // sh 'cat /etc/ansible/hosts'
 
 
                 sshagent (credentials: ['centos-private-key']) {
