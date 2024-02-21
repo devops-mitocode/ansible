@@ -1,0 +1,4 @@
+[servers]
+server1 ansible_host=35.91.219.16
+server2 ansible_host=35.91.219.17
+server3 ansible_host=35.91.219.18
