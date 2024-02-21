@@ -29,6 +29,8 @@ pipeline {
 
                     // sh 'ansible server1 -i hosts -m yum -a "name=java-17-openjdk state=latest" -u ec2-user --become'
 
+                    sh 'ansible-inventory -i hosts --list -y'
+
                     sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
 
                     sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml'
