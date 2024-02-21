@@ -3,7 +3,7 @@
   become: true
   remote_user: ec2-user
   tasks:
-  - name: Instalar java
+  - name: Instalar java 17
     yum:
-      name: java-11-openjdk
+      name: java-17-openjdk
       state: latest
