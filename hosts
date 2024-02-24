@@ -1,5 +1,5 @@
 [servers]
-server1 ansible_host=54.69.220.80
-server2 ansible_host=54.69.220.80
-server3 ansible_host=54.69.220.80
-server4 ansible_host=54.69.220.80     ansible_connection=ssh     ansible_user=ec2-user     ansible_become=yes
+server1 ansible_host=35.91.230.131
+server2 ansible_host=35.91.230.132
+server3 ansible_host=35.91.230.133
+server4 ansible_host=35.91.230.134     ansible_connection=ssh     ansible_user=ec2-user     ansible_become=yes
