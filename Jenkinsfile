@@ -9,6 +9,8 @@ pipeline {
         stage('ansible') {
             steps {
                 sh 'ansible --version'
+
+                sh 'ansible server1 -i hosts -a "cat /etc/os-release" -u ec2-user'
             }
         }           
     }
