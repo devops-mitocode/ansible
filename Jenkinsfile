@@ -8,9 +8,12 @@ pipeline {
     stages {
         stage('ansible') {
             steps {
+                
                 sh 'ansible --version'
 
-                sh 'ansible server1 -i hosts -a "cat /etc/os-release" -u ec2-user'
+                sshagent(credentials: ['centos-private-key']) {
+                    sh 'ansible server1 -i hosts -a "cat /etc/os-release" -u ec2-user'
+                }
             }
         }           
     }
