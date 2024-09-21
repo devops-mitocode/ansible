@@ -28,7 +28,7 @@ pipeline {
                     sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
 
 
-                    sh 'ansible-playbook -i hosts playbooks/server1.yml'
+                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
                 }
             }
         }           
