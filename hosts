@@ -1,3 +1,4 @@
+[servers]
 server1 ansible_host=44.243.159.213
 server2 ansible_host=44.243.159.214
 server3 ansible_host=44.243.159.215
