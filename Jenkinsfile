@@ -21,7 +21,11 @@ pipeline {
                     // sh 'ansible servers -i hosts -m ping -u ec2-user'
                     // sh 'ansible server1:server3 -i hosts -m ping -u ec2-user'
 
+                    // sudo yum install tree -y
                     sh 'ansible server1 -i hosts -m ansible.builtin.yum -a "name=tree state=latest" -u ec2-user --become'
+
+                    // sudo yum install git -y
+                    sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
                 }
             }
         }           
