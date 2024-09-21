@@ -1,0 +1,13 @@
+---
+- hosts: server1
+  become: true
+  remote_user: ec2-user
+  tasks:
+  - name: Install wget
+    yum:
+      name: wget
+      state: latest
+  - name: Install nmap
+    yum:
+      name: nmap
+      state: latest      
