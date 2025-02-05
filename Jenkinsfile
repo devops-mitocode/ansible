@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            // image 'alpine/ansible:2.18.1'
-            image 'quay.io/ansible/ansible-runner:stable-2.12-latest'
+            image 'alpine/ansible:2.18.1'
+            // image 'quay.io/ansible/ansible-runner:stable-2.12-latest'
             args '-u root'
         }
     }
@@ -29,7 +29,9 @@ pipeline {
                     // sh 'ansible server1 -i hosts -m ansible.builtin.yum -a "name=tree state=latest" -u ec2-user --become'
 
                     sh 'ansible-inventory -i hosts --list'
-                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
+                    // sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
+
+                    sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
                 }
             }
         }
