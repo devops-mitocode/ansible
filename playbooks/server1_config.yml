@@ -7,3 +7,7 @@
       ansible.builtin.yum:
         name: java-21-openjdk
         state: latest
+    - name: Install unzip
+      ansible.builtin.yum:
+        name: unzip
+        state: latest
