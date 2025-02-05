@@ -18,6 +18,8 @@ pipeline {
                 sshagent (credentials: ['centos-private-key']) {
 
                     sh 'ansible server1 -i hosts -a "cat /etc/os-release" -u ec2-user'
+
+                     sh 'ansible server1 -i hosts -m yum -a "name=wget state=latest" -u ec2-user'
                 }
             }
         }
