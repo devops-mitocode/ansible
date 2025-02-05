@@ -34,7 +34,7 @@ pipeline {
 
 
                     sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
-                    // sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml -u ec2-user --become'
+                    sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml'
                 }
             }
         }
