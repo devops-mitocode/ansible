@@ -3,7 +3,7 @@
   remote_user: ec2-user
   become: true
   tasks:
-    - name: Download jboss 7.4
+    - name: Download jboss 8.0
       ansible.builtin.get_url:
         url: https://software-installers-dc.s3.us-west-2.amazonaws.com/jboss-eap-8.0.0.zip
         dest: /home/ec2-user/jboss-eap-8.0.0.zip
