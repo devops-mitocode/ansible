@@ -11,3 +11,7 @@
       ansible.builtin.yum:
         name: unzip
         state: latest
+    - name: Install git
+      ansible.builtin.yum:
+        name: git
+        state: latest        
