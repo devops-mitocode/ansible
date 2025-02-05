@@ -33,7 +33,7 @@ pipeline {
                     // sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
 
 
-                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml -u ec2-user'
+                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml --become'
                     // sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml -u ec2-user --become'
                 }
             }
