@@ -29,9 +29,11 @@ pipeline {
                     // sh 'ansible server1 -i hosts -m ansible.builtin.yum -a "name=tree state=latest" -u ec2-user --become'
 
                     sh 'ansible-inventory -i hosts --list'
-                    // sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
+                    // sh 'ansible-inventory -i hosts --graph'
+                    // sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
 
-                    sh 'ansible server1 -i hosts -m yum -a "name=git state=latest" -u ec2-user --become'
+
+                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml -u ec2-user --become'
                 }
             }
         }
