@@ -3,9 +3,9 @@
   remote_user: ec2-user
   become: true
   tasks:
-    - name: Install Java 21
+    - name: Install Java 17
       ansible.builtin.yum:
-        name: java-21-openjdk
+        name: java-17-amazon-corretto
         state: latest
     - name: Install unzip
       ansible.builtin.yum:
