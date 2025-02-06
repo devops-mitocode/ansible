@@ -5,6 +5,7 @@
   tasks:
     - name: Install Java 17
       ansible.builtin.yum:
+        # name: java-17-openjdk
         name: java-17-amazon-corretto
         state: latest
     - name: Install unzip
@@ -14,4 +15,4 @@
     - name: Install git
       ansible.builtin.yum:
         name: git
-        state: latest        
+        state: latest
