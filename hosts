@@ -1,5 +1,5 @@
 [servers]
-server1 ansible_host=50.112.215.56
+server1 ansible_host=54.218.102.150
 server2 ansible_host=35.92.172.44
 server3 ansible_host=35.92.172.45
 server4 ansible_host=35.92.172.46

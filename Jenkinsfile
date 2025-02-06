@@ -15,7 +15,7 @@ pipeline {
                 sh 'ansible --version'
                 sh 'whoami'
 
-                sshagent (credentials: ['centos-private-key']) {
+                sshagent (credentials: ['amazon-linux-private-key']) {
 
                     // sh 'ansible server1 -i hosts -m ping -u ec2-user'
                     // sh 'ansible server2 -i hosts -m ping -u ec2-user'
