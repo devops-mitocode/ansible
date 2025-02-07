@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh 'ansible --version'
                 sh 'whoami'
+                sh 'env | sort'
 
                 sshagent (credentials: ['amazon-linux-private-key']) {
 
