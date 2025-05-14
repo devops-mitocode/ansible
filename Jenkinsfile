@@ -15,11 +15,9 @@ pipeline {
                 sh 'whoami'
                 sh 'env | sort'
 
-                sh 'ansible-inventory --list -y'
-
-                // sshagent (credentials: ['amazon-linux-private-key']) {
-                    
-                // }
+                sshagent (credentials: ['amazon-linux-private-key']) {
+                    sh 'ansible server1 -i hosts -m ping -u ec2-user'
+                }
             }
         }
     }   
