@@ -29,6 +29,7 @@ pipeline {
 
                     // sudo yum install -y tree
                     sh 'ansible server1 -i hosts -m ansible.builtin.yum -a "name=tree state=latest" -u ec2-user --become'
+                    sh 'ansible server1 -i hosts -m yum -a "name=nmap state=latest" -u ec2-user --become'
 
                 }
             }
