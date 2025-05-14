@@ -14,7 +14,7 @@ pipeline {
                 sh 'ansible --version'
                 sh 'whoami'
                 sh 'env | sort'
-                sh 'cat /etc/ansible/hosts'
+
                 sh 'ansible-inventory --list -y'
 
                 // sshagent (credentials: ['amazon-linux-private-key']) {
