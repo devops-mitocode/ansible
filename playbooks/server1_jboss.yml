@@ -11,3 +11,5 @@
         src: /home/ec2-user/jboss-eap-7.4.0.zip
         dest: /home/ec2-user/
         remote_src: yes
+    - name: Create jboss user
+      command: '/home/ec2-user/jboss-eap-7.4/bin/add-user.sh -u "{{ lookup(''env'', ''JBOSS_CREDENTIALS_USR'') }}" -p "{{ lookup(''env'', ''JBOSS_CREDENTIALS_PSW'') }}"'

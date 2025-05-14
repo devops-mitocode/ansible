@@ -10,6 +10,7 @@ pipeline {
     }
     environment {
         ANSIBLE_HOST_KEY_CHECKING = 'False'
+        JBOSS_CREDENTIALS = credentials('jboss-credentials')
     }
     stages {
         stage('ansible') {
