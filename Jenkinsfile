@@ -15,8 +15,9 @@ pipeline {
     stages {
         stage('ansible') {
             steps {
+                sh 'whoami'
                 sh 'ansible --version'
-                // sh 'whoami'
+
                 // sh 'env | sort'
 
                 // sshagent (credentials: ['amazon-linux-private-key']) {
