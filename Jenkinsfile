@@ -10,7 +10,7 @@ pipeline {
     }
     environment {
         ANSIBLE_HOST_KEY_CHECKING = 'False'
-        // JBOSS_CREDENTIALS = credentials('jboss-credentials')
+        JBOSS_CREDENTIALS = credentials('jboss-credentials')
     }
     stages {
         stage('ansible') {
@@ -18,7 +18,7 @@ pipeline {
                 sh 'whoami'
                 sh 'ansible --version'
 
-                // sh 'env | sort'
+                sh 'env | sort'
 
                 sshagent (credentials: ['amazon-linux-private-key']) {
 
@@ -44,9 +44,9 @@ pipeline {
 
                     // sh 'ansible-inventory -i hosts --graph'
 
-                    sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
+                    // sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
 
-                    // sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml'
+                    sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml'
 
                 }
             }
