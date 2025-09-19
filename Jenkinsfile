@@ -8,10 +8,10 @@ pipeline {
     options {
         ansiColor('xterm')
     }
-    // environment {
-    //     ANSIBLE_HOST_KEY_CHECKING = 'False'
-    //     JBOSS_CREDENTIALS = credentials('jboss-credentials')
-    // }
+    environment {
+        ANSIBLE_HOST_KEY_CHECKING = 'False'
+        // JBOSS_CREDENTIALS = credentials('jboss-credentials')
+    }
     stages {
         stage('ansible') {
             steps {
@@ -23,7 +23,7 @@ pipeline {
                 sshagent (credentials: ['amazon-linux-private-key']) {
 
                     sh 'ansible server1 -i hosts -m ping -u ec2-user'
-                    
+
                     // // sh 'ansible server1:server3 -i hosts -m ping -u ec2-user'
                     // // sh 'ansible servers -i hosts -m ping -u ec2-user'
                     // // sh 'ansible all -i hosts -m ping -u ec2-user'
