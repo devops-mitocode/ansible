@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('ansible') {
             steps {
-                sh 'whoami'
+                sh 'uuid'
                 sh 'ansible --version'
 
                 // sh 'env | sort'
