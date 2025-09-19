@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'alpine/ansible:2.18.6'
-            // args '-u root'
+            args '-u root'
         }
     }
     options {
@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('ansible') {
             steps {
-                sh 'uuid'
+                sh 'whoami'
                 sh 'ansible --version'
 
                 // sh 'env | sort'
