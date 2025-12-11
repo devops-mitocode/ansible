@@ -9,6 +9,6 @@
         state: latest
     # yum search java
     - name: Install Java
-      yum:
+      ansible.builtin.yum:
         name: java-17-amazon-corretto
         state: latest
