@@ -10,6 +10,13 @@ pipeline {
             steps {
                 sh 'whoami'
                 sh 'ansible --version'
+                sh 'cat /etc/ansible/hosts'
+
+                // sshagent(credentials: ['amazon-linux-private-key']) {
+
+
+
+                // }
             }
         }
     }
