@@ -34,11 +34,13 @@ pipeline {
 
                     // sh 'ansible server1 -i hosts -m yum -a "name=tree state=latest" -u ec2-user'
 
-                    sh 'ansible server1 -i hosts -m yum -a "name=tree state=latest" -u ec2-user --become'
+                    // sh 'ansible server1 -i hosts -m yum -a "name=tree state=latest" -u ec2-user --become'
 
                     // sh 'ansible server1 -i hosts -m yum -a "name=tree state=absent" -u ec2-user --become'
 
-                    sh 'ansible server1 -i hosts -m yum -a "name=nmap state=latest" -u ec2-user --become'
+                    // sh 'ansible server1 -i hosts -m yum -a "name=nmap state=latest" -u ec2-user --become'
+
+                    sh 'ansible-inventory -i hosts --graph'
 
 
                 }
