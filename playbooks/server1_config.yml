@@ -3,7 +3,7 @@
   become: true
 
   tasks:
-    - name: Install Git on Amazon Linux
+    - name: Install Git
       yum:
         name: git
         state: latest
