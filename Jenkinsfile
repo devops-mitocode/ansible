@@ -7,10 +7,12 @@ pipeline {
     }
     environment {
         ANSIBLE_HOST_KEY_CHECKING = 'False'
+        JBOSS_CREDENTIALS = credentials('jboss-credentials')
     }
     stages {
         stage('ansible') {
             steps {
+                sh 'env | sort'
                 sh 'whoami'
                 sh 'ansible --version'
                 sh 'ansible-inventory --list'
