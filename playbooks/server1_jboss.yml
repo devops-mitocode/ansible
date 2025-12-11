@@ -1,0 +1,15 @@
+- hosts: server1
+  remote_user: ec2-user
+  become: true
+
+  tasks:
+    - name: Download JBoss 7.4
+      ansible.builtin.get_url:
+        url: https://software-installers-dc.s3.us-west-2.amazonaws.com/jboss-eap-7.4.0.zip
+        dest: /home/ec2-user/jboss-eap-7.4.0.zip
+        
+    - name: Unzip jboss-eap-7.4.0.zip
+      ansible.builtin.unarchive:
+        src: /home/ec2-user/jboss-eap-7.4.0.zip
+        dest: /home/ec2-user/
+        remote_src: yes
