@@ -4,5 +4,5 @@ server2 ansible_host=18.236.236.248
 server3 ansible_host=18.236.236.249
 
 [servers2]
-server1 ansible_host=18.236.236.250
-server2 ansible_host=18.236.236.251
+server4 ansible_host=18.236.236.250
+server5 ansible_host=18.236.236.251
