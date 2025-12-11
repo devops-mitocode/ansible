@@ -1,8 +1,8 @@
-[servers]
+[groupA]
 server1 ansible_host=18.236.236.247
 server2 ansible_host=18.236.236.248
 server3 ansible_host=18.236.236.249
 
-[servers2]
+[groupB]
 server4 ansible_host=18.236.236.250
 server5 ansible_host=18.236.236.251
