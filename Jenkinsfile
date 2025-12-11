@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'alpine/ansible:2.18.6'
-            // args '-u root'
+            args '-u root'
         }
     }
     stages {
